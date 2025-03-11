@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Travel Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="logo">✈️ Travel Agency</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="booking.html">Booking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container py-5">
+        <h2 class="text-center mb-4">Book Your Trip</h2>
+        <p class="text-center mb-5">Ready for your next adventure? Complete the form below to start planning your dream vacation.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Travel Preferences</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="destination" class="form-label">Where would you like to go?</label>
+                                <select class="form-select" id="destination" required>
+                                    <option value="" selected disabled>Select a destination</option>
+                                    <option value="bali">Bali, Indonesia</option>
+                                    <option value="paris">Paris, France</option>
+                                    <option value="santorini">Santorini, Greece</option>
+                                    <option value="kyoto">Kyoto, Japan</option>
+                                    <option value="machupicchu">Machu Picchu, Peru</option>
+                                    <option value="safari">Safari, Tanzania</option>
+                                    <option value="other">Other (please specify)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="otherDestination" class="form-label">If other, please specify:</label>
+                                <input type="text" class="form-control" id="otherDestination">
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="departureDate" class="form-label">Departure Date</label>
+                                    <input type="date" class="form-control" id="departureDate" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="returnDate" class="form-label">Return Date</label>
+                                    <input type="date" class="form-control" id="returnDate" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="travelers" class="form-label">Number of Travelers</label>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="adults" class="form-label">Adults</label>
+                                        <select class="form-select" id="adults" required>
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="children" class="form-label">Children</label>
+                                        <select class="form-select" id="children">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="rooms" class="form-label">Rooms</label>
+                                        <select class="form-select" id="rooms" required>
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Preferred Accommodation</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" id="hotel" checked>
+                                    <label class="form-check-label" for="hotel">Hotel</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" id="resort">
+                                    <label class="form-check-label" for="resort">Resort</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" id="villa">
+                                    <label class="form-check-label" for="villa">Private Villa</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" id="apartment">
+                                    <label class="form-check-label" for="apartment">Apartment/Vacation Rental</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Travel Interests (select all that apply)</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="beaches">
+                                            <label class="form-check-label" for="beaches">Beaches & Relaxation</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="culture">
+                                            <label class="form-check-label" for="culture">Cultural Experiences</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="adventure">
+                                            <label class="form-check-label" for="adventure">Adventure Activities</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="cuisine">
+                                            <label class="form-check-label" for="cuisine">Food & Cuisine</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="wildlife">
+                                            <label class="form-check-label" for="wildlife">Wildlife & Nature</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="history">
+                                            <label class="form-check-label" for="history">Historical Sites</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="budget" class="form-label">Approximate Budget (USD)</label>
+                                <select class="form-select" id="budget">
+                                    <option selected disabled>Select your budget range</option>
+                                    <option value="economy">Economy ($1,000 - $3,000)</option>
+                                    <option value="standard">Standard ($3,000 - $5,000)</option>
+                                    <option value="premium">Premium ($5,000 - $8,000)</option>
+                                    <option value="luxury">Luxury ($8,000+)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="additionalInfo" class="form-label">Additional Information or Special Requests</label>
+                                <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Tell us about any specific activities, dietary requirements, accessibility needs, or other special requests..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Personal Information</h3>
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Country</label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="" selected disabled>Select your country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">How did you hear about us?</label>
+                                <select class="form-select">
+                                    <option selected disabled>Please select an option</option>
+                                    <option>Search Engine</option>
+                                    <option>Social Media</option>
+                                    <option>Friend or Family</option>
+                                    <option>Travel Blog</option>
+                                    <option>Previous Customer</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Preferred Contact Method</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" checked>
+                                    <label class="form-check-label" for="contactEmail">Email</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contactMethod" id="contactPhone">
+                                    <label class="form-check-label" for="contactPhone">Phone</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contactMethod" id="contactEither">
+                                    <label class="form-check-label" for="contactEither">Either</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Submit Booking Request</button>
+                            <p class="text-muted text-center mt-3"><small>A travel consultant will contact you within 24 hours to discuss your trip.</small></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Travel Agency. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

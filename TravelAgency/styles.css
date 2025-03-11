@@ -1,0 +1,55 @@
+body {
+    background: url('palmtrees.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.logo {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+}
+
+/* Custom Utility Classes */
+.shadow-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;  /*suprascrie orice regula */
+    transition: all 0.3s ease;
+}
+
+/* Style for index.html
+.hero h1 {
+    text-shadow: 2px 2px 4px
+} */
+
+
